@@ -1,0 +1,107 @@
+/* #Main Menu */
+.main-navigation a {
+	font-style: $menu_font_style;
+	font-size: $menu_font_size{px};
+	line-height: $menu_line_height;
+	letter-spacing: $menu_letter_spacing{em};
+	color: $primary_text_color;
+}
+
+.main-navigation__default .menu > li > a {
+	font-family: @font_family( $menu_font_family );
+	text-transform: $menu_text_transform;
+	font-weight: $menu_font_weight;
+}
+
+.main-navigation li:hover > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	color: $accent_color;
+}
+
+.main-navigation .sub-menu a:hover,
+.main-navigation .sub-menu .current_page_item > a,
+.main-navigation .sub-menu .current-menu-item > a,
+.main-navigation .sub-menu .current_page_ancestor > a,
+.main-navigation .sub-menu .current-menu-ancestor > a {
+	color: $accent_color2;
+}
+
+.main-navigation li.menu-item-has-children > a:before,
+.main-navigation li.menu-item-has-children > a:after {
+	background-color: $primary_text_color;
+}
+.main-navigation li.menu-item-has-children:hover > a:before,
+.main-navigation li.menu-item-has-children:hover > a:after,
+.main-navigation li.menu-item-has-children.current_page_item > a:before,
+.main-navigation li.menu-item-has-children.current_page_item > a:after,
+.main-navigation li.menu-item-has-children.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children.current-menu-ancestor > a:after {
+	background-color: $accent_color2;
+}
+
+.main-navigation li.menu-item-has-children li:hover > a:before,
+.main-navigation li.menu-item-has-children li:hover > a:after,
+.main-navigation li.menu-item-has-children li.current_page_item > a:before,
+.main-navigation li.menu-item-has-children li.current_page_item > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-item > a:after,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current_page_ancestor > a:after,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:before,
+.main-navigation li.menu-item-has-children li.current-menu-ancestor > a:after {
+	background-color: $accent_color2;
+}
+
+/* Header Style 3 */
+.site-header__style-3 .main-navigation a {
+	color: $invert_text_color;
+}
+.site-header__style-3 .main-navigation__default ul ul {
+	border-color: $accent_color;
+}
+
+.site-header__style-3 .main-navigation .menu > li:hover > a,
+.site-header__style-3 .main-navigation .menu > li.current_page_item > a,
+.site-header__style-3 .main-navigation .menu > li.current-menu-item > a,
+.site-header__style-3 .main-navigation .menu > li.current_page_ancestor > a,
+.site-header__style-3 .main-navigation .menu > li.current-menu-ancestor > a {
+	color: $invert_text_color;
+	background-color: $accent_color;
+}
+.site-header__style-3.site-header__mobile .main-navigation .menu > li:hover > a,
+.site-header__style-3.site-header__mobile .main-navigation .menu > li.current_page_item > a,
+.site-header__style-3.site-header__mobile .main-navigation .menu > li.current-menu-item > a,
+.site-header__style-3.site-header__mobile .main-navigation .menu > li.current_page_ancestor > a,
+.site-header__style-3.site-header__mobile .main-navigation .menu > li.current-menu-ancestor > a {
+	color: $accent_color;
+	background-color: transparent;
+}
+
+.site-header__style-3 .main-navigation li.menu-item-has-children > a:before,
+.site-header__style-3 .main-navigation li.menu-item-has-children > a:after {
+	background-color: $invert_text_color;
+}
+
+/* #Mobile Menu */
+.mobile-menu-toggle-button {
+	border-bottom-color: $invert_text_color;
+}
+.mobile-menu-toggle-button:before,
+.mobile-menu-toggle-button:after {
+	background-color: $invert_text_color;
+}
+
+/* Vertical Menu */
+.main-navigation__vertical ul.menu li a{
+	font-family: @font_family( $h4_font_family );
+}
+.main-navigation__vertical ul.menu li.menu-parent-item a{
+	font-family: @font_family( $body_font_family );
+}

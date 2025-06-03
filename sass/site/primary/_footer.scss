@@ -1,0 +1,58 @@
+.site-footer {
+	&__wrap {
+		font-size: 14px;
+		
+		.space-between-content {
+			
+			&:not(:empty) {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			
+			@include media-breakpoint-down(xs) {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		.footer {
+			&-logo__link {
+				display: block;
+				margin-left: 0;
+				margin-right: 15px;
+				padding: 0;
+				letter-spacing: 0;
+				line-height: 1.2;
+				text-transform: lowercase;
+			}
+
+			&-copyright {
+				display: inline-block;
+				vertical-align: top;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+
+			&-menu {
+				display: inline-block;
+				vertical-align: top;
+				padding-top: 8px;
+				padding-bottom: 8px;
+
+				li {
+					margin-left: 13px;
+				}
+			}
+		}
+	}
+}
+
+.footer-area {
+	@include make-container();
+	@include make-container-max-widths();
+	display: flex;
+	flex-wrap: wrap;
+	>.widget {
+		width: 25%;
+	}
+}

@@ -1,0 +1,177 @@
+.widget-title {
+	border-color: @lighten($grey_color_1, 2);
+}
+
+
+.entry-content .wp-block-latest-posts__list li a+time,
+.page-content .wp-block-latest-posts__list li a+time {
+	color: $primary_text_color;
+}
+
+.widget_archive ul li,
+.wp-block-archives-list li,
+.widget_archive li > a,
+.wp-block-archives-list li a,
+.widget_categories ul > li,
+.entry-content .wp-block-categories-list li,
+.page-content .wp-block-categories-list li {
+	color: $accent_color;
+}
+
+.widget_archive li > a:hover,
+.wp-block-archives-list li a:hover {
+	color: $accent_color2;
+}
+
+.entry-content .wp-block-latest-posts__list .wp-block-latest-posts__post-date:before,
+.page-content .wp-block-latest-posts__list .wp-block-latest-posts__post-date:before {
+	background-color: $secondary_text_color;
+}
+
+.entry-content .wp-block-archives-list li a:before,
+.page-content .wp-block-archives-list li a:before {
+	background-color: $primary_text_color;
+}
+
+/* Widget Search */
+.search-form__submit.btn path {
+	fill: $invert_text_color;
+}
+
+/* #Widget Recent Posts - Comments*/
+.entry-content .wp-block-latest-posts__list:not(.is-grid) li a:not(:hover),
+.page-content .wp-block-latest-posts__list:not(.is-grid) li a:not(:hover),
+.widget_recent_comments li>a:not(:hover),
+.entry-content .wp-block-latest-comments:not(.has-excerpts) .wp-block-latest-comments__comment-link,
+.page-content .wp-block-latest-comments:not(.has-excerpts) .wp-block-latest-comments__comment-link {
+	color: $primary_text_color;
+}
+
+.widget_recent_comments .recentcomments,
+.entry-content .wp-block-latest-comments__comment-meta,
+.page-content .wp-block-latest-comments__comment-meta {
+	color: $secondary_text_color;
+}
+.widget_recent_comments a:hover {
+	color: $accent_color2;
+}
+
+.widget_recent_entries ul li {
+	border-left-color: $accent_color;
+}
+.widget_recent_entries a,
+.widget_recent_comments a {
+	color: $primary_text_color;
+}
+.widget_recent_entries a:hover,
+.widget_recent_comments a:hover {
+	color: $accent_color;
+}
+
+.invert .widget_recent_entries a:not(:hover),
+.invert .widget_recent_comments a:not(:hover) {
+	color: $invert_text_color;
+}
+
+.widget_recent_entries .post-date {
+	color: rgb(147,147,153);
+}
+
+/* #Widget RSS */
+.widget_rss .widget-title a.rsswidget {
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: $h4_font_size{px};
+	line-height: $h4_line_height;
+	font-family: @font_family( $h4_font_family );
+	letter-spacing: $h4_letter_spacing{em};
+	text-transform: $h4_text_transform;
+	color: $primary_text_color;
+}
+.widget_rss a.rsswidget {
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: $h6_font_size{px};
+	line-height: $h6_line_height;
+	font-family: @font_family( $h6_font_family );
+	letter-spacing: $h6_letter_spacing{em};
+	text-transform: $h6_text_transform;
+	color: $primary_text_color;
+}
+.widget_rss a.rsswidget:hover {
+	color: $accent_color2;
+}
+.widget_rss .rss-date {
+	color: @darken($grey_color_1, 19);
+}
+
+/* #Widget Tags */
+.tagcloud a,
+.entry-content .wp-block-tag-cloud a,
+.page-content .wp-block-tag-cloud a {
+	font-family: @font_family( $meta_font_family );
+	letter-spacing: $meta_letter_spacing{em};
+	color: $primary_text_color;
+	border-color: $grey_color_1;
+}
+.tagcloud a:hover,
+.entry-content .wp-block-tag-cloud a:hover,
+.page-content .wp-block-tag-cloud a:hover {
+	color: $invert_text_color;
+	border-color: $accent_color;
+	background-color: $accent_color;
+}
+
+
+/* #Widget Calendar */
+.widget_calendar .calendar_wrap {
+	background-color: @darken($invert_text_color, 4.7);
+}
+
+.widget_calendar tbody tr:nth-child(odd) {
+	background-color: @darken($invert_text_color, 10);
+}
+
+.widget_calendar caption,
+.widget_calendar tfoot a:before {
+	color: $accent_color;
+}
+
+.widget_calendar tfoot a:hover:before {
+	color: $primary_text_color;
+}
+
+.widget_calendar tbody td#today,
+.widget_calendar tbody td a {
+	color: $invert_text_color;
+}
+
+.widget_calendar tbody td#today,
+.widget_calendar tbody td a {
+	background-color: $accent_color;
+}
+
+.widget_calendar tbody td a:hover {
+	background-color: $accent_color2;
+	color: $invert_text_color;
+}
+
+.wp-calendar-nav-prev a:before,
+.wp-calendar-nav-next a:before {
+	background-color: $secondary_text_color;
+}
+.wp-calendar-nav-prev a:hover:before,
+.wp-calendar-nav-next a:hover:before {
+	background-color: $primary_text_color;
+}
+.widget_calendar #today:before {
+    background-color: $accent_color2;
+}
+
+/* Recent Posts with Feature Image */
+.widget_zemez_core_post_thumb .recent_post_title {
+	color: $primary_text_color;
+}
+.widget_zemez_core_post_thumb .recent_post_title:hover {
+	color: $accent_color;
+}

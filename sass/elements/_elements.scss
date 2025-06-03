@@ -1,0 +1,245 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+blockquote,
+q {
+	quotes: none;
+	&:before,
+	&:after {
+		content: '';
+	}
+}
+
+blockquote {
+	position: relative;
+	padding: 0 0 0 23px !important;
+	margin: 30px 0 30px;
+	text-align: left;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 1.33;
+	font-size: 14px;
+	clear: left;
+	border-left-width: 2px;
+	border-left-style: solid;
+
+	@include media-breakpoint-up(sm) {
+		margin-left: 50px;
+		padding-right: 0 !important;
+		font-size: 18px;
+
+		.wp-block-column & {
+			padding: 39px 25px 35px !important;
+			font-size: 18px;
+
+			&:before {
+				position: static;
+			}
+		}
+	}
+	
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 18px;
+		height: 18px;
+		margin-bottom: 10px;
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 298.667 298.667" xml:space="preserve"><polygon points="0,170.667 64,170.667 21.333,256 85.333,256 128,170.667 128,42.667 0,42.667"/><polygon points="170.667,42.667 170.667,170.667 234.667,170.667 192,256 256,256 298.667,170.667 298.667,42.667"/></svg>');
+				mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 298.667 298.667" xml:space="preserve"><polygon points="0,170.667 64,170.667 21.333,256 85.333,256 128,170.667 128,42.667 0,42.667"/><polygon points="170.667,42.667 170.667,170.667 234.667,170.667 192,256 256,256 298.667,170.667 298.667,42.667"/></svg>');
+		
+		transform: rotate(180deg);
+		
+		.wp-block-column & {
+			width: 34px;
+			height: 23px;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+
+		@include media-breakpoint-up(sm) {
+			width: 77%;
+
+			.wp-block-column & {
+				width: 100%;
+			}
+		}
+	}
+
+	&:not(.has-very-dark-gray-color):after {
+		background-color: #f8f8f8;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.has-text-align-right {
+		padding: 45px 50px 42px !important;
+
+		@include media-breakpoint-up(sm) {
+			padding-right: 50px !important;
+			padding-left: 0 !important;
+		}
+
+		&:after {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.wp-block-pullquote.is-style-solid-color & {
+		@include media-breakpoint-down(md) {
+			min-width: 100%;
+		}
+	}
+	
+	p {
+		margin: 30px 0 0;
+		font-style: italic !important;
+
+		&:first-child {
+			position: relative;
+			margin-top: 0;
+		}
+
+		
+	}
+
+	cite {
+		position: relative;
+		display: inline-block;
+		margin-top: 10px;
+		text-transform: none;
+		font-weight: 300;
+		font-style: normal;
+		font-size: 12px !important;
+
+		.wp-block-pullquote & {
+			color: #625f74;
+		}
+
+		em {
+			font-style: normal;
+		}
+	}
+
+	&.is-style-large {
+		cite {
+			padding-left: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	:root .has-cyan-bluish-gray-background-color & {
+		background: none;
+	}
+}
+
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 1.5em 0;
+}
+
+.svg-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	fill: currentColor;
+
+	path {
+		transition: fill 0.2s ease-in-out;
+	}
+}
+
+.fa::before {
+	content: "+";
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+.site-main {
+	table {
+		margin: 0 0 1.5em;
+		max-width: 100%;
+		border: 1px solid #ececec;
+		th,
+		td {
+			padding: 5px;
+			vertical-align: top;
+			border: 1px solid #ececec;
+		}
+		thead th {
+			vertical-align: bottom;
+			border-bottom: 1px solid #ececec;
+		}
+		tbody + tbody {
+			border-top: 1px solid #ececec;
+		}
+	}
+}
+
+.edit-link {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+.has-drop-cap:not(:focus):first-letter {
+	margin-top: .15em;
+	font-weight: 300;
+	font-size: 4.5rem;
+}
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+
+@import "lists";
+/*--------------------------------------------------------------
+## ToTop
+--------------------------------------------------------------*/
+
+@import "totop-button";
+/*--------------------------------------------------------------
+## Page preloader
+--------------------------------------------------------------*/
+
+@import "page-preloader";

@@ -1,0 +1,43 @@
+.alignleft {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 15px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 30px;
+	margin-bottom: 15px;
+}
+
+.aligncenter {
+	clear: both;
+	@include center-block;
+	margin-bottom: 15px;
+}
+
+.textaligncenter {
+	text-align: center;
+}
+
+.alignnone,
+.aligncenter,
+.alignleft,
+.alignright,
+.alignwide,
+.alignfull {
+    margin-bottom: 2rem;
+
+    .wp-block-image & {
+    	margin-bottom: 2rem;
+    }
+}
+
+p > .alignnone,
+p > .aligncenter,
+p > .alignleft,
+p > .alignright,
+p > .alignwide,
+p > .alignfull {
+    margin-bottom: 0;
+}

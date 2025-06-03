@@ -1,0 +1,89 @@
+/* #Breadcrumbs */
+.breadcrumbs_items {
+	border-bottom-color: @lighten($grey_color_1, 2);
+}
+.breadcrumbs.invert .breadcrumbs_item,
+.breadcrumbs.invert .breadcrumbs_item a:not(:hover) {
+	color: $invert_text_color;
+}
+.breadcrumbs_item_link {
+	color: $primary_text_color;
+}
+.breadcrumbs_item_link:hover{
+	color: $accent_color;
+}
+
+.breadcrumbs_item_target {
+	color: $grey_color_1;
+}
+.breadcrumbs_item_sep path {
+	fill: $grey_color_1;
+}
+
+
+/* #Post navigation */
+.post-navigation .nav-links__label {
+	color: $primary_text_color;
+}
+.post-navigation .nav-links__label span {
+	color: @darken($grey_color_1, 19);
+}
+.post-navigation .nav-links__label:hover span {
+	color: $accent_color;
+}
+
+/* Post Page Links */
+.page-links .post-page-numbers{
+	color: $link_color;
+}
+.page-links .post-page-numbers:hover{
+	color: $link_hover_color;
+}
+.page-links .post-page-numbers.current{
+	color: $primary_text_color;
+}
+
+
+/* #Pagination */
+.comment-navigation,
+.posts-navigation {
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, round, 0.8)px;
+	line-height: $h4_line_height;
+	font-family: @font_family( $h4_font_family );
+	letter-spacing: $h4_letter_spacing{em};
+	text-align: $h4_text_align;
+	text-transform: $h4_text_transform;
+	border-color: @alpha($primary_text_color, 10%);
+}
+
+/* #Posts List Pagination */
+.pagination {
+	border-top-color: @lighten($grey_color_1, 2);
+}
+.pagination .page-numbers {
+	color: $invert_text_color;
+	border-color: $accent_color;
+	background-color: $accent_color;
+}
+.site-content .page-links .post-page-numbers.current,
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+	color: $accent_color;
+}
+.pagination a.page-numbers.prev:hover,
+.pagination a.page-numbers.next:hover {
+	color: $accent_color;
+}
+
+.comment-navigation a:not(:hover),
+.posts-navigation a:not(:hover),
+.post-navigation a:not(:hover) {
+	color: $h4_color;
+}
+.comment-navigation a:hover,
+.posts-navigation a:hover,
+.post-navigation a:hover {
+	color: $accent_color;
+}

@@ -1,0 +1,26 @@
+/* #Footer */
+footer.site-footer {
+	background-color: $footer_bg;
+}
+
+.footer-copyright {
+	color: $footer_text_color;
+}
+
+.footer-logo__link {
+	font-family: 'Montserrat', serif-serif;
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	color: $accent_color;
+}
+.footer-logo__link:hover {
+	color: $accent_color;
+}
+
+.footer-info__holder a {
+	color: $footer_text_color;
+}
+.footer-info__holder a:hover {
+	color: $invert_text_color;
+}

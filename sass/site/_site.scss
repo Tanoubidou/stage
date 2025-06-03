@@ -1,0 +1,151 @@
+.site {
+	@include hyphens(auto);
+	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	word-wrap: break-word;
+	
+	&-header__wrap.container,
+	&-content.container,
+	&-footer__wrap.container {
+		padding-left: 0;
+		padding-right: 0;
+
+		@media (max-width: 1024px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		body.layout-fullwidth &,
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.breadcrumbs {
+		body.layout-fullwidth &,
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 1024px) {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			.container {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-content {
+		flex: auto;
+		width: 100%;
+		min-height: 1px;
+
+		body:not(.elementor-page) &,
+		body.single.elementor-page & {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			max-width: 100%;
+		}
+
+		body.blog.layout-fullwidth & {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 1024px) {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+
+		&__wrap {
+			max-width: 100%;
+
+			&.container {
+				max-width: 100%;
+			}
+		}
+	}
+	
+	&-main {
+		
+		.card-wrapper,
+		& > .post,
+		.single-post-wrapper .post,
+		& > .page,
+		.related-posts,
+		.comments-area {
+			padding: 30px;
+			border-radius: 3px;
+			background-color: #fff;
+		}
+
+		>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.col-lg-9.col-lg-push-1 {
+		left: auto;
+		right: auto;
+		margin: 0 auto;
+	}
+}
+
+body {
+	background-color: #ffffff;
+}
+
+.space-between-content {
+	@include space-between-content;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+@import "primary/footer";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+@import "primary/single-post";
+
+/*--------------------------------------------------------------
+## Sticky 
+--------------------------------------------------------------*/
+
+@import "primary/sticky";
+
+/*--------------------------------------------------------------
+## Related Posts
+--------------------------------------------------------------*/
+
+@import "primary/related-posts";

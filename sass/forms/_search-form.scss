@@ -1,0 +1,16 @@
+.search-form {
+	
+	&__input-wrap{
+		margin-bottom: 0;
+	}
+
+	&__field[type='search'] {
+		width: 100%;
+		max-width: 100%;
+		min-width: 50px;
+	}
+	
+	&__submit.btn {
+		 
+	}
+}

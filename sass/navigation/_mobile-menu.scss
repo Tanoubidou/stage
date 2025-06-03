@@ -1,0 +1,298 @@
+/**
+ * Mobile Site Menu
+ */
+
+.site-header .site-header__mobile {
+	
+	&.site-header__wrap {
+		position: relative;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		.space-between-content {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	
+	.site-branding {
+		order: 1;
+		position: relative;
+		z-index: 1002;
+		min-width: 60%;
+		margin-right: auto !important;
+
+		.site-logo__link {
+			@include media-breakpoint-down(xs) {
+				font-size: 28px;
+			}
+		}
+	}
+
+	.site-header__right_part {
+		margin-left: auto;
+
+		& > * {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.header-search-toggle {
+			margin-left: 0;
+		}
+
+		.social-list--header {
+			display: none;
+		}
+	}
+
+	/* Header Cart */
+	.header-cart {
+		position: static;
+
+		&__link-wrap {
+			position: relative;
+			z-index: 1002;
+		}
+
+		&__content {
+			overflow-y: scroll;
+			position: fixed;
+			z-index: 998;
+			top: 0;
+			right: -75%;
+			width: 75%;
+			height: 100vh;
+			margin: 70px 0 0;
+			background-color: #f8f8f8;
+			transition: all .3s cubic-bezier(.35, .19, .45, .91);
+
+			&.show {
+				right: 0;
+			}
+
+			.admin-bar & {
+				margin-top: 116px;
+			}
+
+			.woocommerce-cart & {
+				display: none;
+			}
+		}
+	}
+	
+	/* Search Popup */
+	.header-search-popup {
+		height: auto;
+		
+		&__inner {
+			padding-top: 90px;
+			
+			.header-search-form__label {
+				display: none;
+			}
+
+			.header-search-form__field {
+				padding-bottom: 4px;
+				text-align: left;
+				text-transform: none;
+				font-size: 18px;
+				line-height: 43px;
+			}
+
+			.header-search-form__submit {
+				display: none;
+			}
+		}
+
+		.header-search-popup-close {
+			top: 40px;
+		}
+	}
+	
+	/* Vertical Menu */
+	.menu-toggle-wrapper {
+		position: relative;
+		z-index: 1003;
+		min-width: 20%;
+	}
+
+	&.site-header__style-3 {
+		.main-navigation__default {
+			ul {
+				ul {
+					border-top: 0;
+				}
+			}
+		}
+	}
+
+	.main-navigation__vertical {
+		.menu {
+			li {
+				a {
+					padding-top: 8px;
+					padding-bottom: 9px;
+					line-height: 1.5;
+					font-size: 18px;
+				}
+
+				&.menu-item-has-children a:after {
+					width: 12px;
+					height: 12px;
+					top: 15px;
+					right: -20px;
+				}
+			}
+
+			.menu-parent-item {
+				padding-left: 0;
+			}
+
+			.menu-back-item {
+				position: static;
+			}
+		}
+	}
+}
+
+.site-header > div:not(.site-header__style-2) .main-navigation.mobile-menu {
+	overflow-y: scroll;
+	position: fixed;
+	z-index: 9998;
+	top: 0;
+	right: -80%;
+	display: block;
+	width: 80%;
+	height: 100vh;
+	margin: 0;
+	text-align: left;
+	background-color: #1c1c21;
+	transition: all .3s cubic-bezier(.35, .19, .45, .91);
+
+	.admin-bar & {
+		padding-top: 46px;
+	}
+	
+	&.mobile-menu-open {
+		right: 0;
+	}
+	
+	.main-navigation-inner {
+		display: block;
+		width: 100%;
+		padding-top: 100px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 86px;
+	}
+	
+	.menu {
+		
+		li {
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			a {
+				padding: 8px 0 9px;
+				text-transform: none;
+				font-size: 18px;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+	
+	.sub-menu {
+		position: initial;
+		margin-left: 30px;
+		margin-top: 0;
+		padding: 0;
+		background: none;
+		box-shadow: none;
+		
+		li a {
+			width: auto;
+			font-size: 18px;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+	
+	.menu-item-has-children > a:before,
+	.menu-item-has-children > a:after{
+		content: none;
+	}
+
+	.social-list--header {
+		display: block;
+		margin-top: -26px;
+		padding-top: 0;
+    	padding-left: 30px;
+    	padding-right: 30px;
+    	padding-bottom: 66px;
+
+		li {
+			display: block;
+			margin-bottom: 16px;
+			margin-left: 0;
+
+			a {
+				text-align: left;
+			}
+		}
+	}
+}
+
+/* Toogle button styles */
+
+.mobile-menu-toggle-button {
+	position: relative;
+	z-index: 1003;
+	width: 20px;
+	height: 16px;
+	margin: 0 0 0 20px;
+	padding: 0;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	background: none;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 2px;
+		transition: width 0.1s ease-out, transform 0.1s ease-out;
+	}
+
+	&:after {
+		top: 7px;
+	}
+
+	&.mobile-menu-close {
+		border: 0;
+
+		&:before,
+		&:after {
+			top: 9px;
+			left: -3px;
+			width: 26px;
+			background-color: #c4c4c4;
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+}

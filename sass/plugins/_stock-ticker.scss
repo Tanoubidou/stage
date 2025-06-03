@@ -1,0 +1,101 @@
+.stock-ticker-wrapper {
+	ul.stock_ticker {
+		margin-bottom: -7px !important;
+		font-size: 14px;
+
+		.change,
+		.changep {
+			font-size: 12px;
+		}
+
+		&.stockticker {
+			font-size: 12px;
+
+			.change,
+			.changep {
+				font-size: 10px;
+			}
+		}
+
+		&.static {
+			.sqitem {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				margin-right: -10px;
+
+				> * {
+					padding-right: 10px;
+				}
+
+				.company {
+					flex-grow: 1;
+				}
+			}
+		}
+		
+		li {
+			margin-bottom: 15px;
+		}
+
+		span {
+			margin-right: 0;
+		}
+
+		.minus>.sqitem:before,
+		.plus>.sqitem:before {
+			content: '';
+			display: inline-block;
+			margin-right: 5px;
+			width: 14px;
+			height: 14px;
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"/></svg>');
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"/></svg>');
+		}
+
+		.minus>.sqitem:before {
+			background-color: #d8442f;
+			transform: rotate(90deg) translateX(2px);
+		}
+
+		.plus>.sqitem:before {
+			background-color: #009d59;
+			transform: rotate(90deg) translateX(2px);
+		}
+	}
+
+	&.invert {
+		.sqitem {
+			.company,
+			.stock-price {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#secondary {
+	.widget_stock_ticker {
+		background-color: #1C1C21;
+
+		.widget-title {
+			color: #fff;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+### Skins styles
+--------------------------------------------------------------*/
+.skin {
+	&-cryprate {
+		.stock_ticker {
+			.sqitem {
+				font-size: 12px;
+			}
+		}
+	}
+}
