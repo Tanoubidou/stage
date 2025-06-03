@@ -1,0 +1,65 @@
+/*--------------------------------------------------------------
+### Masonry Posts List
+--------------------------------------------------------------*/
+
+.posts-list.posts-list--masonry {
+	flex-direction: column;
+	min-height: 100vh;
+	margin-bottom: 0;
+	column-gap: 30px;
+	
+	@media ( max-width: 640px ) {
+		justify-content: center;
+	}
+	
+	.masonry-item {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		padding: 0;
+		margin-bottom: 30px;
+	}
+
+	&.posts-list-3-cols {
+		column-count: 1;
+
+		@include media-breakpoint-up(sm) {
+			column-count: 2;
+		}
+
+		@include media-breakpoint-up(md) {
+			column-count: 3;
+		}
+	}
+
+	&.posts-list-2-cols{
+		column-count: 1;
+
+		@include media-breakpoint-up(md) {
+			column-count: 2;
+		}
+	}
+
+	.has-post-thumbnail {
+		
+		.post-thumbnail {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+
+			a {
+				display: block;
+			}
+
+			img {
+				min-width: 100%;
+				width: 100%;
+			}
+		}
+
+		.entry-cats {
+			top: 0;
+			left: 0;
+		}
+	}
+}

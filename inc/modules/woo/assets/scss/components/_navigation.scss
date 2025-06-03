@@ -1,0 +1,99 @@
+/**
+ * WooCommerce pagination
+ */
+.woocommerce-pagination {
+	margin: 0 0 30px;
+	padding: 20px;
+	list-style: none;
+	border-radius: 3px;
+	background-color: #fff;
+	
+	ul.page-numbers {
+		margin: 0;
+		list-style: none;
+		
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 5px;
+			margin-right: 4px;
+			text-align: center;
+			
+			.page-numbers {
+				display: block;
+				width: 26px;
+				text-align: center;
+				font-weight: 400;
+				line-height: 42px;
+				font-size: 14px;
+				border-radius: 3px;
+				transition: background-color 0.2s ease-out;
+
+				&:hover,
+				&.current {
+					background-color: #f3f3f9;
+				}
+
+				&.prev,
+				&.next {
+					width: auto;
+					margin: 0;
+					border: 0;
+					background: none;
+				}
+
+				&.prev {
+					margin-right: 5px;
+				}
+
+				&.next {
+					margin-left: 5px;
+				}
+
+				.nav-icon {
+					display: inline-block;
+					vertical-align: middle;
+					margin-top: -2px;
+					
+					&.icon-next {
+						margin-left: 8px;
+						
+						&:after {
+							content: '';
+							display: block;
+							width: 14px;
+							height: 12px;
+							background-position: center;
+							background-repeat: no-repeat;
+							background-color: #c3c3c9;
+							
+							-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.49536 0L14 6L8.49536 12L7.43962 10.8493L11.142 6.81369H0V5.18631H11.142L7.43962 1.15074L8.49536 0Z"/></svg>');
+									mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.49536 0L14 6L8.49536 12L7.43962 10.8493L11.142 6.81369H0V5.18631H11.142L7.43962 1.15074L8.49536 0Z"/></svg>');
+							
+							transition: background-color 0.2s ease-out;
+						}
+					}
+					
+					&.icon-prev {
+						margin-right: 7px;
+						
+						&:before {
+							content: '';
+							display: block;
+							width: 14px;
+							height: 12px;
+							background-position: center;
+							background-repeat: no-repeat;
+							background-color: #c3c3c9;
+							
+							-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.50464 0L0 6L5.50464 12L6.56038 10.8493L2.85798 6.81369H14V5.18631H2.85798L6.56038 1.15074L5.50464 0Z"/></svg>');
+									mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.50464 0L0 6L5.50464 12L6.56038 10.8493L2.85798 6.81369H14V5.18631H2.85798L6.56038 1.15074L5.50464 0Z"/></svg>');
+							
+							transition: background-color 0.2s ease-out;
+						}
+					}
+				}
+			}
+		}
+	}
+}

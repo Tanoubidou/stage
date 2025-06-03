@@ -1,0 +1,47 @@
+/**
+ *  Checkbox
+ */
+label.checkbox,
+label.inline {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+
+	&.woocommerce-form__label {
+		padding-left: 30px;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"] + span::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		background-color: #f8f8f8;
+	}
+	input[type="checkbox"] + span::after {
+		content: '';
+		opacity: 0;
+		position: absolute;
+		top: 8px;
+		left: 4px;
+		width: 22px;
+		height: 18px;
+
+				mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+		background-color: #222;
+	}
+	input[type="checkbox"]:checked + span::after {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,43 @@
+/*-------------------
+### Default Styles
+---------------------*/
+
+.posts-list__item {
+	&.default-item {
+		
+		& + .post {
+			margin-top: 30px;
+			padding-top: 30px;
+			border-top-width: 1px;
+			border-top-style: solid;
+		}
+		
+		.sticky-label {
+			margin: 0 8px 0 0;
+		}
+			
+		.post-thumbnail {
+			overflow: hidden;
+			
+			a {
+				display: block;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+### Posts List Formats
+--------------------------------------------------------------*/
+
+.default-item.format-post {
+	.entry-footer .entry-meta {
+		.tags-links+div:not(:empty) {
+			margin-top: 28px;
+		}
+		>div {
+			@include space-between-content;
+		}
+	}
+}

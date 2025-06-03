@@ -1,0 +1,151 @@
+/*-------------------
+### Timeline Styles
+---------------------*/
+
+.posts-list__item {
+	&.timeline-item {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+
+		.posts-list__new-date {
+			width: 100%;
+			margin-top: 0;
+    		margin-bottom: 30px;
+    	}
+
+		&.has-post-thumbnail {
+			
+			.entry-cats {
+				top: 0;
+
+				@include media-breakpoint-up(xl) {
+					width: 235px;
+				}
+			}
+
+			.posts-list__item-inner {
+				@include media-breakpoint-up(xl) {
+					display: flex;
+				}
+			}
+		}
+
+		.posts-list__item-inner {
+			position: relative;
+			flex: 0 0;
+			flex-basis: calc(100% - 80px);
+			max-width: calc(100% - 80px);
+		}
+			
+		.post-thumbnail {
+			display: block;
+
+			@include media-breakpoint-up(xl) {
+				flex: 0 0 auto;
+				width: 275px;
+				margin-right: 30px;
+			}
+
+			a {
+				display: block;
+			}
+
+			img {
+				max-height: 90vh;
+				object-fit: cover;
+			}
+		}
+		
+		.entry {
+			
+			&-header {
+
+				.entry-title {
+					margin-top: 0;
+					margin-bottom: 7px;
+				}
+			}
+		}
+	}
+
+	.post-timeline {
+		&-date {
+			position: relative;
+			font-size: 12px;
+			line-height: 1.2;
+			text-align: center;
+			margin-right: 20px;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				bottom: -40px;
+				z-index: 0;
+				width: 1px;
+			}
+			
+			&__link {
+				position: relative;
+				z-index: 1;
+				display: block;
+				width: 60px;
+				
+				&:hover {
+					box-shadow: 0 7px 12px 0 rgba(75, 77, 88, 0.15);
+				}
+			}
+
+			&__date,
+			&__time {
+				display: block;
+				padding: 5px;
+			}
+
+			&__day {
+				display: block;
+				font-size: 22px;
+			}
+
+			&__date {
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+			}
+
+			&__time {
+				border-bottom-right-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+		}
+	}
+
+	&:not(:first-child) {
+		.posts-list__new-date + .post-timeline-date:before {
+			top: -30px;
+		}
+	}
+
+	&:last-of-type {
+		.post-timeline-date:before {
+			bottom: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+### Posts List Formats
+--------------------------------------------------------------*/
+
+.timeline-item.format-post {
+	.entry-footer .entry-meta {
+		.tags-links+div:not(:empty) {
+			margin-top: 28px;
+		}
+		>div {
+			@include space-between-content;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+/**
+ * Product main styles
+ */
+.products{
+
+	a:focus{
+		outline: none;
+	}
+
+	.product{
+		margin-bottom: 30px;
+	}
+}
+
+.single-product{
+	
+	.product > .row {
+		justify-content: space-between;
+	}
+}

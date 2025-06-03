@@ -1,0 +1,237 @@
+/**
+ * Variations form
+ */
+.woocommerce {
+	
+	.summary {
+		table.variations {
+			margin: 49px 0 0;
+		}
+	}
+
+	table.variations {
+		width: 100%;
+		margin-bottom: 0;
+		border: 0;
+
+		tr, td {
+			display: block;
+			margin: 0;
+			border-radius:0;
+			border:0;
+			background: none !important;
+		}
+
+		tr {
+			
+			td {
+				padding: 0 0 10px 0;
+				font-size: 14px;
+			}
+		}
+
+		.label {
+			min-width: 80px;
+			margin: 0 0 10px;
+			padding: 0;
+			text-transform: capitalize;
+			font-weight: 300;
+			font-size: 15px;
+			line-height: 22px;
+			border: 0;
+
+			&:after {
+				content: ':';
+			}
+		}
+
+		.jet-woo-builder .label {
+			&:after {
+				content: '';
+			}
+		}
+
+		td.value {
+			position: relative;
+			padding: 0;
+			
+			select {
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+				}
+			}
+			
+			.reset_variations {
+				display: inline-block !important;
+				margin: 0;
+				padding: 0;
+				font-weight: 700;
+				line-height: 21px;
+				font-size: 14px;
+			}
+		}
+		
+		select {
+			display: block;
+			max-width: 100%;
+			width: 80%;
+			height: auto;
+			margin: 0;
+			min-width: 0;
+			cursor: pointer;
+			
+			@include media-breakpoint-up(sm) {
+				width: 100%;
+			}
+		}
+
+		tr + tr {
+			padding-top: 20px;
+		}
+	}
+}
+
+.woocommerce .elementor-jet-single-add-to-cart table.variations .label:after {
+	display: none;
+}
+
+.single-product {
+	
+	// Quantity
+	.quantity {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+		margin-right: 17px;
+	
+		label:not(.screen-reader-text){
+			clip: auto;
+			position: relative !important;
+			top: 0;
+			height: auto;
+			width: auto;
+			overflow: visible;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		
+		input {
+			width: 100px;
+			height: 60px;
+			padding: 0;
+			text-align: center;
+			font-weight: 400;
+			font-size: 18px;
+			border: 0;
+		}
+	}
+
+	// add to cart button
+	.single_add_to_cart_button {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+		min-width: calc(100% - 123px);
+		padding: 20px 40px 21px;
+		line-height: 21px;
+		font-size: 14px;
+		border-radius: 3px;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -2px;
+			margin-right: 10px;
+			width: 21px;
+			height: 21px;
+			
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.159088 0.909119C0.159088 0.494905 0.494875 0.159119 0.909088 0.159119H3.27436C3.61525 0.159119 3.91325 0.389004 3.99979 0.718721L4.56872 2.88639H17.2727C17.5098 2.88639 17.7329 2.99849 17.8744 3.18869C18.016 3.3789 18.0592 3.62482 17.9911 3.8519L15.2638 12.9428C15.1687 13.26 14.8767 13.4773 14.5455 13.4773H6.35544C6.01396 13.4773 5.71559 13.2466 5.62961 12.9161L3.26474 3.82679L3.26433 3.82524L2.69581 1.65912H0.909088C0.494875 1.65912 0.159088 1.32333 0.159088 0.909119ZM4.96027 4.38639L6.93528 11.9773H13.9874L16.2647 4.38639H4.96027Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.36362 16.2045C5.77368 16.2045 5.29544 16.6828 5.29544 17.2727C5.29544 17.8627 5.77368 18.3409 6.36362 18.3409C6.95356 18.3409 7.4318 17.8627 7.4318 17.2727C7.4318 16.6828 6.95356 16.2045 6.36362 16.2045ZM3.79544 17.2727C3.79544 15.8543 4.94525 14.7045 6.36362 14.7045C7.78199 14.7045 8.9318 15.8543 8.9318 17.2727C8.9318 18.6911 7.78199 19.8409 6.36362 19.8409C4.94525 19.8409 3.79544 18.6911 3.79544 17.2727Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5454 16.2045C13.9555 16.2045 13.4773 16.6828 13.4773 17.2727C13.4773 17.8627 13.9555 18.3409 14.5454 18.3409C15.1354 18.3409 15.6136 17.8627 15.6136 17.2727C15.6136 16.6828 15.1354 16.2045 14.5454 16.2045ZM11.9773 17.2727C11.9773 15.8543 13.1271 14.7045 14.5454 14.7045C15.9638 14.7045 17.1136 15.8543 17.1136 17.2727C17.1136 18.6911 15.9638 19.8409 14.5454 19.8409C13.1271 19.8409 11.9773 18.6911 11.9773 17.2727Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.159088 0.909119C0.159088 0.494905 0.494875 0.159119 0.909088 0.159119H3.27436C3.61525 0.159119 3.91325 0.389004 3.99979 0.718721L4.56872 2.88639H17.2727C17.5098 2.88639 17.7329 2.99849 17.8744 3.18869C18.016 3.3789 18.0592 3.62482 17.9911 3.8519L15.2638 12.9428C15.1687 13.26 14.8767 13.4773 14.5455 13.4773H6.35544C6.01396 13.4773 5.71559 13.2466 5.62961 12.9161L3.26474 3.82679L3.26433 3.82524L2.69581 1.65912H0.909088C0.494875 1.65912 0.159088 1.32333 0.159088 0.909119ZM4.96027 4.38639L6.93528 11.9773H13.9874L16.2647 4.38639H4.96027Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.36362 16.2045C5.77368 16.2045 5.29544 16.6828 5.29544 17.2727C5.29544 17.8627 5.77368 18.3409 6.36362 18.3409C6.95356 18.3409 7.4318 17.8627 7.4318 17.2727C7.4318 16.6828 6.95356 16.2045 6.36362 16.2045ZM3.79544 17.2727C3.79544 15.8543 4.94525 14.7045 6.36362 14.7045C7.78199 14.7045 8.9318 15.8543 8.9318 17.2727C8.9318 18.6911 7.78199 19.8409 6.36362 19.8409C4.94525 19.8409 3.79544 18.6911 3.79544 17.2727Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5454 16.2045C13.9555 16.2045 13.4773 16.6828 13.4773 17.2727C13.4773 17.8627 13.9555 18.3409 14.5454 18.3409C15.1354 18.3409 15.6136 17.8627 15.6136 17.2727C15.6136 16.6828 15.1354 16.2045 14.5454 16.2045ZM11.9773 17.2727C11.9773 15.8543 13.1271 14.7045 14.5454 14.7045C15.9638 14.7045 17.1136 15.8543 17.1136 17.2727C17.1136 18.6911 15.9638 19.8409 14.5454 19.8409C13.1271 19.8409 11.9773 18.6911 11.9773 17.2727Z"/></svg>');
+			
+			transition: background-color 0.2s ease-out;
+		}
+		
+		&.disabled {
+			opacity: .3;
+		}
+	}
+}
+
+// grouped list
+table.woocommerce-grouped-product-list {
+	padding-bottom: 10px;
+	border:0;
+	
+	tr, td {
+		border-radius:0;
+		border:0;
+		background: none !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 2.15em;
+	}
+	
+	&.variations_form {
+		margin-bottom: 30px;
+	}
+
+	.single_variation_wrap {
+		.woocommerce-variation-price {
+			padding: 0 0 15px;
+		}
+	}
+	
+	.variations_form {
+		margin-bottom: 10px;
+	}
+	
+	.woocommerce-grouped-product-list-item__price {
+		font-size: 24px;
+
+		del {
+			font-size: 18px;
+			color: #888;
+		}
+		
+		ins {
+			font-style: normal;
+			border: 0;
+		}
+	}
+
+	div.quantity {
+		float: left;
+		margin: 0 10px 0 0;
+		position: relative;
+		
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+		
+		input.qty {
+			width: 80px;
+			text-align: center;
+			appearance: none;
+			line-height: 2.3;
+		}
+		
+		.tm-qty-minus,
+		.tm-qty-plus {
+			display: none;
+		}
+	}
+	
+	.button {
+		clear: left;
+		margin-top: 20px;
+		font-size: 12px;
+		padding: 22.5px 30px 22.5px 60px;
+	}
+}
+
+.woocommerce-variation.single_variation {
+    margin-bottom: 30px;
+}

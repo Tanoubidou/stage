@@ -1,0 +1,155 @@
+/**
+ * WooCommerce Widgets
+ */
+
+@import "price-filter";
+@import "rating-filter";
+@import "attributes-filter";
+@import "top-rated-products";
+@import "recent-reviews";
+@import "product-categories";
+@import "products";
+@import "recently-viewed-products";
+@import "product-search";
+@import "tag-cloud";
+@import "cart";
+
+.woocommerce.widget{
+	
+	.widget-title {
+		margin-bottom: 18px;
+		padding: 0;
+		border: 0;
+	}
+	
+	+ .widget {
+		#secondary & {
+			margin-top: 30px;
+			padding: 20px;
+		}
+	}
+
+	input {
+		width: 100%;
+		font-weight: 400;
+		border-color: #f3f3f9;
+		box-sizing: border-box;
+	}
+}
+
+%product-list-widget {
+	list-style: none;
+	margin: 0;
+	
+	li {
+		overflow: hidden;
+		position: relative;
+		min-height: 60px;
+		padding-left: 75px;
+
+		& + li {
+			margin-top: 20px;
+		}
+		
+		a {
+			display: block;
+			padding-top: 2px;
+		}
+		
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			max-width: 60px;
+			border-radius: 3px;
+		}
+
+		dl.variation {
+			display: flex;
+
+			.variation-size {
+				margin: 0;
+				font-size: 14px;
+			}
+
+			dd.variation-size {
+				margin-left: 10px;
+			}
+		}
+
+		.star-rating {
+			margin: 2px 0 1px;
+			width: 66px;
+			height: 13px;
+
+			&:before {
+				height: 13px;
+				
+						mask-image: url('data:image/svg+xml;utf8,<svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M12.9813 4.93644C12.9365 4.79188 12.8174 4.68653 12.6739 4.66471L8.64387 4.05079L6.84152 0.222545C6.77739 0.0862656 6.64497 0 6.50002 0C6.35504 0 6.22265 0.0862656 6.15849 0.222545L4.35607 4.05079L0.326087 4.66471C0.182656 4.68653 0.0634475 4.79188 0.0186587 4.93641C-0.0261556 5.08097 0.0112193 5.23963 0.115041 5.3457L3.03109 8.32558L2.34281 12.5333C2.31828 12.6831 2.37703 12.8344 2.49431 12.9238C2.56066 12.9743 2.63924 13 2.7182 13C2.77884 13 2.83967 12.9849 2.89538 12.9541L6.49999 10.9675L10.1045 12.9541C10.2328 13.0248 10.3883 13.0131 10.5056 12.9237C10.6228 12.8344 10.6816 12.683 10.6571 12.5332L9.96859 8.32558L12.885 5.34567C12.9888 5.23963 13.0262 5.08097 12.9813 4.93644Z"/></svg>');
+				-webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M12.9813 4.93644C12.9365 4.79188 12.8174 4.68653 12.6739 4.66471L8.64387 4.05079L6.84152 0.222545C6.77739 0.0862656 6.64497 0 6.50002 0C6.35504 0 6.22265 0.0862656 6.15849 0.222545L4.35607 4.05079L0.326087 4.66471C0.182656 4.68653 0.0634475 4.79188 0.0186587 4.93641C-0.0261556 5.08097 0.0112193 5.23963 0.115041 5.3457L3.03109 8.32558L2.34281 12.5333C2.31828 12.6831 2.37703 12.8344 2.49431 12.9238C2.56066 12.9743 2.63924 13 2.7182 13C2.77884 13 2.83967 12.9849 2.89538 12.9541L6.49999 10.9675L10.1045 12.9541C10.2328 13.0248 10.3883 13.0131 10.5056 12.9237C10.6228 12.8344 10.6816 12.683 10.6571 12.5332L9.96859 8.32558L12.885 5.34567C12.9888 5.23963 13.0262 5.08097 12.9813 4.93644Z"/></svg>');
+			}
+
+			span {
+				height: 13px;
+
+				&:before {
+							mask-image: url('data:image/svg+xml;utf8,<svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M12.9813 4.93644C12.9365 4.79188 12.8174 4.68653 12.6739 4.66471L8.64387 4.05079L6.84152 0.222545C6.77739 0.0862656 6.64497 0 6.50002 0C6.35504 0 6.22265 0.0862656 6.15849 0.222545L4.35607 4.05079L0.326087 4.66471C0.182656 4.68653 0.0634475 4.79188 0.0186587 4.93641C-0.0261556 5.08097 0.0112193 5.23963 0.115041 5.3457L3.03109 8.32558L2.34281 12.5333C2.31828 12.6831 2.37703 12.8344 2.49431 12.9238C2.56066 12.9743 2.63924 13 2.7182 13C2.77884 13 2.83967 12.9849 2.89538 12.9541L6.49999 10.9675L10.1045 12.9541C10.2328 13.0248 10.3883 13.0131 10.5056 12.9237C10.6228 12.8344 10.6816 12.683 10.6571 12.5332L9.96859 8.32558L12.885 5.34567C12.9888 5.23963 13.0262 5.08097 12.9813 4.93644Z"/></svg>');
+					-webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M12.9813 4.93644C12.9365 4.79188 12.8174 4.68653 12.6739 4.66471L8.64387 4.05079L6.84152 0.222545C6.77739 0.0862656 6.64497 0 6.50002 0C6.35504 0 6.22265 0.0862656 6.15849 0.222545L4.35607 4.05079L0.326087 4.66471C0.182656 4.68653 0.0634475 4.79188 0.0186587 4.93641C-0.0261556 5.08097 0.0112193 5.23963 0.115041 5.3457L3.03109 8.32558L2.34281 12.5333C2.31828 12.6831 2.37703 12.8344 2.49431 12.9238C2.56066 12.9743 2.63924 13 2.7182 13C2.77884 13 2.83967 12.9849 2.89538 12.9541L6.49999 10.9675L10.1045 12.9541C10.2328 13.0248 10.3883 13.0131 10.5056 12.9237C10.6228 12.8344 10.6816 12.683 10.6571 12.5332L9.96859 8.32558L12.885 5.34567C12.9888 5.23963 13.0262 5.08097 12.9813 4.93644Z"/></svg>');
+				}
+			}
+		}
+
+		.quantity {
+			display: inline-block;
+			vertical-align: top;
+			font-weight: 400;
+			line-height: 24px;
+			font-size: 16px;
+		}
+		
+		.amount {
+			font-weight: 700;
+			line-height: 23px;
+			font-size: 16px;
+		}
+
+		ins {
+			font-style: normal;
+			border: 0;
+		}
+
+		del {
+			margin-right: 5px;
+			
+			.amount {
+				font-weight: 400;
+				color: #c3c3c9;
+			}
+		}
+	}
+}
+
+//calendar in woo sidebar
+.woocommerce .widget.widget_calendar{
+	td, th{
+		font-size: 14px;
+		line-height: 44px;
+		padding: 0;
+	}
+
+	tfoot td{
+		line-height: 24px;
+	}
+
+	th{
+		padding-bottom: 40px;
+	}
+}
+
+//shop sidebar style
+.woocommerce aside.widget-area {
+	.widget + .widget:not(.woocommerce) {
+		border-top: none;
+		padding-top: 0;
+	}
+}

@@ -1,0 +1,49 @@
+/**
+ * Top rated products widget
+ */
+.elementor-widget-wp-widget-woocommerce_product_search,
+.widget_product_search{
+
+	form{
+		position: relative;
+		width: 100%;
+	}
+	
+	.search-field{
+	
+	}
+	
+	button{
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		right: 0;
+		display: inline-block;
+		vertical-align: top;
+		width: 50px;
+		padding: 0;
+		font-size: 0;
+		border-radius: 5px;
+		border: 0;
+		background: none;
+
+		&:hover {
+			background: none;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 12px;
+			right: 17px;
+			width: 18px;
+			height: 18px;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.54839C4.43687 1.54839 1.54839 4.43687 1.54839 8C1.54839 11.5631 4.43687 14.4516 8 14.4516C11.5631 14.4516 14.4516 11.5631 14.4516 8C14.4516 4.43687 11.5631 1.54839 8 1.54839ZM0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0479 13L18 16.9521L16.9521 18L13 14.0479L14.0479 13Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.54839C4.43687 1.54839 1.54839 4.43687 1.54839 8C1.54839 11.5631 4.43687 14.4516 8 14.4516C11.5631 14.4516 14.4516 11.5631 14.4516 8C14.4516 4.43687 11.5631 1.54839 8 1.54839ZM0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0479 13L18 16.9521L16.9521 18L13 14.0479L14.0479 13Z"/></svg>');
+
+			transition: background-color 0.2s ease-in-out;
+		}
+	}
+	
+}

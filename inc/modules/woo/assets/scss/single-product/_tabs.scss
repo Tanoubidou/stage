@@ -1,0 +1,124 @@
+/**
+ * WooCommerce tabs
+ */
+.woocommerce-tabs {
+	margin-top: 0;
+	margin-bottom: 80px;
+	padding: 0;
+	border-bottom: 0;
+	padding: 30px;
+	border-radius: 3px;
+	background-color: #fff;
+	
+	//  woocommerce panel
+	.panel {
+		margin: 0;
+		padding: 45px 0 0;
+
+		&.woocommerce-Tabs-panel--description {
+			font-size: 18px;
+		}
+		
+		&.woocommerce-Tabs-panel--additional_information {
+			padding-top: 40px;
+
+			h2 {
+				display: none;
+			}
+
+			table {
+				margin-bottom: 0;
+				border: 0;
+
+				tr {
+					background: none;
+
+					&:nth-child(2n) {
+						background: none;
+					}
+
+					th, td {
+						padding-top: 15px;
+						padding-bottom: 15px;
+						text-align: left;
+						text-transform: capitalize;
+						font-weight: 400;
+						line-height: 22px;
+						font-size: 15px;
+						border: 0;
+						border-bottom: 1px solid #f3f3f9;
+					}
+
+					th {
+						width: 120px;
+						max-width: 300px;
+						padding-left: 0;
+						padding-right: 20px;
+						font-weight: 300;
+
+						&:after {
+							content: ':';
+							margin-left: 4px;
+						}
+					}
+				}
+			}
+		}
+
+		&.woocommerce-Tabs-panel--reviews {
+			padding-top: 31px;
+
+			h2 {
+				margin: 8px 0 32px;
+			}
+			
+			.woocommerce-noreviews {
+				margin-bottom: 19px;
+				font-weight: 500;
+				font-size: 14px;
+			}
+		}
+	}
+	
+	//  woocommerce tabs list
+	.tabs {
+		list-style: none;
+		margin: 0;
+		padding-bottom: 17px;
+		border: 0;
+		border-bottom: 1px solid #f3f3f9;
+		
+		//  woocommerce tabs element
+		li {
+			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			padding-bottom: 0;
+			border: 0;
+
+			.elementor-jet-single-tabs & {
+				border: 0;
+			}
+			
+			@include media-breakpoint-up(sm) {
+				display: inline-block;
+				vertical-align: bottom;
+				width: auto;
+				margin-right: 20px;
+			}
+			
+			a {
+				position: relative;
+				display: block;
+				padding: 0;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 14px;
+			}
+		}
+	}
+
+	& + .related.products {
+		margin-top: 154px;
+	}
+}

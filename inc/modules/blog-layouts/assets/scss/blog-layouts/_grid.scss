@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+### Grid Posts List
+--------------------------------------------------------------*/
+
+.posts-list.posts-list--grid {
+	display: flex;
+	flex-flow: row wrap;
+	min-height: 100vh;
+	margin-bottom: 0;
+	margin-left: -$grid-gutter-width / 2;
+	margin-right: -$grid-gutter-width / 2;
+	
+	@media ( max-width: 640px ) {
+		justify-content: center;
+	}
+	
+	.grid-item {
+		position: relative;
+		flex: 0 0;
+		flex-basis: 100%;
+		max-width: 100%;
+		padding-left: calc(#{$grid-gutter-width} / 2);
+		padding-right: calc(#{$grid-gutter-width} / 2);
+		margin-bottom: 30px;
+	}
+
+	&.posts-list-3-cols {
+		.grid-item {
+			@include media-breakpoint-up(sm) {
+				flex: 0 0;
+				flex-basis: calc(100% / 2);
+				max-width: calc(100% / 2);
+			}
+
+			@include media-breakpoint-up(md) {
+				flex: 0 0;
+				flex-basis: calc(100% / 3);
+				max-width: calc(100% / 3);
+			}
+		}
+	}
+
+	&.posts-list-2-cols{
+		.grid-item {
+			@include media-breakpoint-up(md) {
+				flex: 0 0;
+				flex-basis: calc(100% / 2);
+				max-width: calc(100% / 2);
+			}
+		}
+	}
+	
+	.has-post-thumbnail {
+		
+		.post-thumbnail {
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+
+			a {
+				display: block;
+			}
+		}
+
+		.entry-cats {
+			top: 0;
+			left: 15px;
+		}
+	}
+}

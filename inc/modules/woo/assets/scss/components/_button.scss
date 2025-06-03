@@ -1,0 +1,88 @@
+/**
+ * Buttons
+ */
+.button {
+	padding: 14px 30px 15px;
+	border-radius: 5px;
+
+	&.add_to_cart_button,
+	&.product_type_grouped,
+	&.product_type_external,
+	&.product_type_variable {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			margin-top: -2px;
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.159088 0.909119C0.159088 0.494905 0.494875 0.159119 0.909088 0.159119H3.27436C3.61525 0.159119 3.91325 0.389004 3.99979 0.718721L4.56872 2.88639H17.2727C17.5098 2.88639 17.7329 2.99849 17.8744 3.18869C18.016 3.3789 18.0592 3.62482 17.9911 3.8519L15.2638 12.9428C15.1687 13.26 14.8767 13.4773 14.5455 13.4773H6.35544C6.01396 13.4773 5.71559 13.2466 5.62961 12.9161L3.26474 3.82679L3.26433 3.82524L2.69581 1.65912H0.909088C0.494875 1.65912 0.159088 1.32333 0.159088 0.909119ZM4.96027 4.38639L6.93528 11.9773H13.9874L16.2647 4.38639H4.96027Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.36362 16.2045C5.77368 16.2045 5.29544 16.6828 5.29544 17.2727C5.29544 17.8627 5.77368 18.3409 6.36362 18.3409C6.95356 18.3409 7.4318 17.8627 7.4318 17.2727C7.4318 16.6828 6.95356 16.2045 6.36362 16.2045ZM3.79544 17.2727C3.79544 15.8543 4.94525 14.7045 6.36362 14.7045C7.78199 14.7045 8.9318 15.8543 8.9318 17.2727C8.9318 18.6911 7.78199 19.8409 6.36362 19.8409C4.94525 19.8409 3.79544 18.6911 3.79544 17.2727Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5454 16.2045C13.9555 16.2045 13.4773 16.6828 13.4773 17.2727C13.4773 17.8627 13.9555 18.3409 14.5454 18.3409C15.1354 18.3409 15.6136 17.8627 15.6136 17.2727C15.6136 16.6828 15.1354 16.2045 14.5454 16.2045ZM11.9773 17.2727C11.9773 15.8543 13.1271 14.7045 14.5454 14.7045C15.9638 14.7045 17.1136 15.8543 17.1136 17.2727C17.1136 18.6911 15.9638 19.8409 14.5454 19.8409C13.1271 19.8409 11.9773 18.6911 11.9773 17.2727Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.159088 0.909119C0.159088 0.494905 0.494875 0.159119 0.909088 0.159119H3.27436C3.61525 0.159119 3.91325 0.389004 3.99979 0.718721L4.56872 2.88639H17.2727C17.5098 2.88639 17.7329 2.99849 17.8744 3.18869C18.016 3.3789 18.0592 3.62482 17.9911 3.8519L15.2638 12.9428C15.1687 13.26 14.8767 13.4773 14.5455 13.4773H6.35544C6.01396 13.4773 5.71559 13.2466 5.62961 12.9161L3.26474 3.82679L3.26433 3.82524L2.69581 1.65912H0.909088C0.494875 1.65912 0.159088 1.32333 0.159088 0.909119ZM4.96027 4.38639L6.93528 11.9773H13.9874L16.2647 4.38639H4.96027Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.36362 16.2045C5.77368 16.2045 5.29544 16.6828 5.29544 17.2727C5.29544 17.8627 5.77368 18.3409 6.36362 18.3409C6.95356 18.3409 7.4318 17.8627 7.4318 17.2727C7.4318 16.6828 6.95356 16.2045 6.36362 16.2045ZM3.79544 17.2727C3.79544 15.8543 4.94525 14.7045 6.36362 14.7045C7.78199 14.7045 8.9318 15.8543 8.9318 17.2727C8.9318 18.6911 7.78199 19.8409 6.36362 19.8409C4.94525 19.8409 3.79544 18.6911 3.79544 17.2727Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5454 16.2045C13.9555 16.2045 13.4773 16.6828 13.4773 17.2727C13.4773 17.8627 13.9555 18.3409 14.5454 18.3409C15.1354 18.3409 15.6136 17.8627 15.6136 17.2727C15.6136 16.6828 15.1354 16.2045 14.5454 16.2045ZM11.9773 17.2727C11.9773 15.8543 13.1271 14.7045 14.5454 14.7045C15.9638 14.7045 17.1136 15.8543 17.1136 17.2727C17.1136 18.6911 15.9638 19.8409 14.5454 19.8409C13.1271 19.8409 11.9773 18.6911 11.9773 17.2727Z"/></svg>');
+
+			transition: background-color 0.2s ease-out;
+		}
+	}
+	
+	// loading state
+	&.ajax_add_to_cart.loading {
+		color: transparent !important;
+
+		.button-text,
+		&:before {
+			opacity: 0;
+		}
+		
+		&:after {
+			display: inline-block;
+			@extend %icon-font-default;
+			content: $wc-add-to-cart-loading-icon;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -7px;
+			margin-left: -5px;
+			font-size: $wc-add-to-cart-icon-fz;
+			line-height: $wc-add-to-cart-icon-lh;
+			transition: .3s all ease;
+			
+			@include spin-animation;
+		}
+	}
+	
+	// added state
+	&.ajax_add_to_cart.added {
+		
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+
+			width: 17px;
+			height: 14px;
+			margin-right: 7px;
+			margin-top: 3px;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+
+			transition: background-color 0.2s ease-out
+		}
+	}
+}
+
+.added_to_cart {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+	padding: $wc-button-indents;
+	border-radius: $wc-button-border-radius;
+}
